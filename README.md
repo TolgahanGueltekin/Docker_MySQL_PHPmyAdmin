@@ -22,7 +22,7 @@ Dazu führen wir den folgenden Befehl aus:
 docker run --name container_name -dp new_port:default_port image_name
 ```
 
-**docker run** erstellt anhand des Imagenames einen Container
+**docker run** erstellt anhand des Imagenamen einen Container
    
    - `-p` leitet den Standardport auf einen anderen Port um.
    
@@ -31,6 +31,17 @@ docker run --name container_name -dp new_port:default_port image_name
    - `-d` der Container läuft im Hintergrund.
 
 ### Docker logs
+
+Beim Erstellen eines neuen Containers wird automatisch ein Passwort von MySQL generiert.
+
+Mit dem Befehl `docker logs container_name` kann man das Passwort einsehen.
+
+![image](https://user-images.githubusercontent.com/106013408/193820291-b20f90f3-f65d-44bd-bad2-f15e17e1e958.png)
+
+Das Passwort muss allerdings nach dem ersten Einloggen geändert werden.
+
+
+
 
 
   
