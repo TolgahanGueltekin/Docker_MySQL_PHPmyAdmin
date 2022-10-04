@@ -65,13 +65,15 @@ mysql -uroot -p
 
 ![image](https://user-images.githubusercontent.com/106013408/193835800-22c2ad58-9188-4f18-9819-6e66328bb4d3.png)
 
-Der Nutzer wird aufgefordert das generiert Passwort einzugeben. 
+Der Nutzer wird aufgefordert das generierte Passwort einzugeben. 
 
-Wenn die Anmeldung erfolgreich verlaufen ist, müssen wir zuallererst das Passwort verändern.
-
-```
+Wenn die Anmeldung erfolgreich verlaufen ist, müssen wir zuallererst das Passwort ändern.
 
 ```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
+```
+
+
 
 
 
