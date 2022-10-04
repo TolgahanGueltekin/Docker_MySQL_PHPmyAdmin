@@ -76,6 +76,15 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
 ```
 legen wir ***newpassword*** als neues Passwort fest.
 
+### Verbindung zu MySQL für alle erlauben
+
+Damit man auch außerhalb des Bash auf mysql zugreifen kann, muss man das 'host' attribut für den root user in
+
+der Tabelle mysql.user ändern. 
+
+```
+update mysql.user set host='%' where user='root' and host = 'localhost';
+```
 
 ## MyPhpAdmin Container erstellen
 
