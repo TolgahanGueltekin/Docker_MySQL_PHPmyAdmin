@@ -67,11 +67,14 @@ mysql -uroot -p
 
 Der Nutzer wird aufgefordert das generierte Passwort einzugeben. 
 
-Wenn die Anmeldung erfolgreich verlaufen ist, müssen wir zuallererst das Passwort ändern.
+Wenn die Anmeldung erfolgreich verlaufen ist, müssen wir nur noch das Passwort ändern.
+
+Mit
 
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
 ```
+legen wir ***newpassword*** als neues Passwort fest.
 
 
 
