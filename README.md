@@ -24,9 +24,9 @@ docker run --name container_name -dp new_port:default_port image_name
 
 **docker run** erstellt anhand des Imagenamen einen Container
    
-   - `-p` leitet den Standardport auf einen anderen Port um.
+   - `-p` leitet default_port(Standardport) auf new_port um.
    
-   - `--name` gibt dem Container einen Namen.
+   - `--name` gibt dem Container den Namen container_name.
    
    - `-d` der Container läuft im Hintergrund.
 
@@ -79,7 +79,23 @@ legen wir ***newpassword*** als neues Passwort fest.
 
 ## MyPhpAdmin Container erstellen
 
+### Docker pull
 
+Zuerst das phpmyadmin Image holen
+
+```
+docker pull phpmyadmin:latest
+```
+
+### Docker run
+
+Wir erstellen anhand des Images einen phpmyadmin Container
+
+```
+docker run --name container_name -dp new_port:default_port --link mysql_container_name:db phpmyadmin
+```
+  - `--link` verbindet den phpmyadmin Container mit mysql_container_name.
+  
 
 
 
