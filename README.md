@@ -86,6 +86,10 @@ der Tabelle mysql.user ändern.
 update mysql.user set host='%' where user='root' and host = 'localhost';
 ```
 
+Anschließend müssen wir den `flush privileges` Befehl ausführen, weil wir eine Veränderung
+
+in einer **grant Tabelle** durchgeführt haben.
+
 ## MyPhpAdmin Container erstellen
 
 ### Docker pull
