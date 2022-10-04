@@ -77,6 +77,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
 legen wir ***newpassword*** als neues Passwort fest.
 
 
+## MyPhpAdmin Container erstellen
+
+
 
 
 
