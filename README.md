@@ -107,9 +107,15 @@ Wir erstellen anhand des Images einen phpmyadmin Container
 ```
 docker run --name container_name -dp new_port:default_port --link mysql_container_name:db phpmyadmin
 ```
-  - `--link` verbindet den phpmyadmin Container mit mysql_container_name.
-  
+  - `--link` verbindet den **phpmyadmin Container** mit **mysql_container_name**.
 
+### Phpmyadmin login
+  
+![image](https://user-images.githubusercontent.com/106013408/193851792-73245d42-7110-43c7-a118-49abb765e3e0.png)
+
+Nun können wir phpmyadmin im Browser unter **localhost:new_port** aufrufen und ubs
+
+mit **root** als Benutzernamen und dem **MySQL-Passwort** anmelden.
 
 
 
