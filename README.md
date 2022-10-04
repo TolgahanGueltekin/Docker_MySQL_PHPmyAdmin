@@ -8,7 +8,7 @@ Schritt für Schritt Anleitung zur Erstellung eines mysql und phpmyadmin Contain
 
 Bevor wir den Container erstellen können, müssen wir zuerst das Image mit folgendem Befehl holen:
   
-```
+```Dockerfile
 docker pull mysql/mysql-server:latest
 ```
 
