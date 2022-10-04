@@ -78,7 +78,7 @@ legen wir ***newpassword*** als neues Passwort fest.
 
 ### Verbindung zu MySQL für alle erlauben
 
-Damit man auch außerhalb des Bash auf mysql zugreifen kann, muss man das 'host' attribut für den root user in
+Damit man auch außerhalb des Bash auf mysql zugreifen kann, muss man das Attribut **host** für den User **root** in
 
 der Tabelle mysql.user ändern. 
 
