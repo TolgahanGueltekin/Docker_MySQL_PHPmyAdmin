@@ -36,11 +36,21 @@ Beim Erstellen eines neuen Containers wird automatisch ein Passwort von MySQL ge
 
 Mit dem Befehl `docker logs container_name` kann man das Passwort einsehen.
 
-![image](https://user-images.githubusercontent.com/106013408/193820291-b20f90f3-f65d-44bd-bad2-f15e17e1e958.png)
+![image](https://user-images.githubusercontent.com/106013408/193827215-a6c7ed10-a4aa-426f-bf78-f312c460dc05.png)
 
 Das Passwort muss allerdings nach dem ersten Einloggen geändert werden.
 
+### Docker exec
 
+Als nächstes wollen wir auf das Terminal des MySQL Containers zugreifen, damit wir MySQL ausführen können.
+
+```
+docker exec -it container_name bash
+```
+
+  - `-i` interaktiver Modus, bedeutet, dass der STDIN geöffnet bleibt.
+  
+  - `-t` allokiert ein pseudo-tty.
 
 
 
