@@ -19,7 +19,7 @@ Nachdem wir das Image nun geholt haben, können wir jetzt den Container erstelle
 Dazu führen wir den folgenden Befehl aus:
 
 ```
-docker run --name container_name -dp new_port:default_port image_name
+docker run --name container_name -d -p new_port:default_port image_name
 ```
 
 **docker run** erstellt anhand des Imagenamen einen Container
@@ -61,7 +61,7 @@ mysql -uroot -p
 ```
 
   - `-uroot` spezifiziert den root als user
-  - `-p` ???
+  - `-p` passwort
 
 ![image](https://user-images.githubusercontent.com/106013408/193835800-22c2ad58-9188-4f18-9819-6e66328bb4d3.png)
 
@@ -78,7 +78,7 @@ legen wir ***newpassword*** als neues Passwort fest.
 
 ### Verbindung zu MySQL für alle erlauben
 
-Damit man auch außerhalb des Bash auf mysql zugreifen kann, muss man das Attribut **host** für den User **root** in
+Damit man auch außerhalb des Containers auf mysql zugreifen kann, muss man das Attribut **host** für den User **root** in
 
 der Tabelle mysql.user ändern. 
 
@@ -88,7 +88,7 @@ update mysql.user set host='%' where user='root' and host = 'localhost';
 
 Anschließend müssen wir den `flush privileges` Befehl ausführen, weil wir eine Veränderung
 
-in einer **grant Tabelle** durchgeführt haben.
+in einer **grant Tabelle** durchgeführt haben. Dadurch werden die Privilegien der User aktualisiert. 
 
 ## MyPhpAdmin Container erstellen
 
